@@ -15,12 +15,12 @@
   <!-- End Google Tag Manager -->
 
   <!-- Materialize - Compiled and minified CSS-->
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <!-- Font Awesome Icon - CSS-->
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
   <!-- Custom Styles-->
   <link rel="stylesheet" href="/assets/css/style.css" />
-  <title>Mahrukh Tauseef | Research Assistant</title>
+  <title>Mahrukh Tauseef</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126939217-2"></script>
@@ -42,7 +42,7 @@
   <meta property="article:publisher" content="https://mahrukhtauseef.github.io/" />
  
   <meta name="author" content="Mahrukh Tauseef" />
-  <meta name="description" content="I am someone who finds joy in building and problem solving." />
+  <meta name="description" content="I am someone who finds joy in building solutions." />
   <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicon/apple-icon-57x57.png" />
   <link rel="apple-touch-icon" sizes="60x60" href="/assets/img/favicon/apple-icon-60x60.png" />
   <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-icon-72x72.png" />
@@ -74,12 +74,11 @@
   <!-- Navigation Menu-->
   <!-- Nav class 1 -->
   <nav class="hide-on-small-only">
-    <ul class="side-nav fixed section table-of-contents">
+    <ul class="sidenav sidenav-fixed section table-of-contents">
 
       <li class="logo">
-        <a id="logo-container" aria-label="Navigate to the beginning of the page" href="#intro"
-          class="brand-logo grey-blue-text">
-          <img src="/assets/img/IMG_3148.png" class="circle img-responsive profile-pic" alt="avatar">
+        <a href="#intro">
+          <img src="/assets/img/IMG_3148.png" alt="avatar" class="profile-pic" />
         </a>
       </li>
 
@@ -101,12 +100,6 @@
       </li>
 
       <li class="bold">
-        <!--
-        ICONS:
-        mdi-action-assessment
-        mdi-social-poll
-        mdi-av-equalizer
-        -->
         <a aria-label="Navigate to the Skills section" href="#skills" class="waves-effect waves-dark teal-text"><i
             class="mdi-action-assessment small"></i><span>Skills</span></a>
       </li>
@@ -120,27 +113,12 @@
       </li>
 
       <li class="bold">
-        <!-- 
-        1. mdi-communication-contacts
-        2. mdi-content-mail
-        3. mdi-communication-email
-        -->
+
         <a aria-label="Navigate to the Contact section" href="#contact" class="waves-effect waves-dark teal-text"><i
             class="mdi-content-mail small"></i><span>Contact</span></a>
       </li>
 
       <li class="bold">
-        <!--
-        ICONS:
-        1. mdi-action-description
-        2. mdi-file-folder
-        3. mdi-file-folder-open
-        4. mdi-file-attachment
-        5. mdi-file-folder-shared
-        -->
-        <!-- <a aria-label="Open Varad's resume in a new tab" href="#resume" target="_blank"
-          onclick="window.open('https://drive.google.com/file/d/1vYi-bMyIsZPve0x_clxY8xsDtiHiOMd3/view?usp=sharing')"
-          class="waves-effect waves-dark teal-text"><i class="mdi-file-folder-open small"></i><span>Resume</span></a> -->
         <a aria-label="Open Mahrukh's resume in a new tab" href="https://mahrukhtauseef.github.io/assets/resume/Tauseef_Resume.pdf" target="_blank"
         class="waves-effect waves-dark teal-text"><i class="mdi-file-folder-open small"></i><span>Resume</span></a>  
       </li>
@@ -158,7 +136,7 @@
 
   <!-- Nav class 3 -->
   <nav class="hide-on-large only">
-    <ul id="slide-out" class="side-nav">
+    <ul id="slide-out" class="sidenav">
       <li class="bold">
         <a aria-label="Navigate to the About section" href="#about" class="waves-effect waves-dark teal-text"><i
             class="mdi-social-person small"></i><span>About</span></a>
@@ -197,7 +175,7 @@
   <!-- Main Content-->
   <main>
     <!-- First Section: Heading lines and image -->
-    <section id="intro" class="section scrollspy full-height">
+    <section id="intro" class="section scrollspy full-screen-section">
       <div class="overlay"></div>
       <div class="container">
         <div class="col-md-9">
@@ -208,6 +186,18 @@
               <!-- <h5 style="color:#00796b">A <span class="typing" style="font-weight: 300; color:#fff"></span></h5> -->
               <h5>A builder who finds joys in creating solutions</h5>
             </div>
+            <div class="carousel carousel-slider center">
+              <div class="carousel-item" href="#one!">
+                <img src="assets/img/Mahrukh1.jpeg" alt="First image">
+              </div>
+              <div class="carousel-item" href="#two!">
+                <img src="assets/img/Mahrukh2.jpg" alt="Second image">
+              </div>
+              <div class="carousel-item" href="#three!">
+                <img src="assets/img/Mahrukh3.png" alt="Third image">
+              </div>
+            </div>
+            <!--
             <div class="social">
               <a href="https://www.linkedin.com/in/mahrukh-tauseef/" target="_blank">
                 <button class="icon-btn linkedin">
@@ -219,7 +209,6 @@
                   <i class="fa fa-github"></i>
                 </button>
               </a>
-
             </div>
             <div class='buttons'>
               <a href="#about" class="readme">Read More</a>
@@ -228,260 +217,134 @@
           </div>
         </div>
       </div>
+         -->
     </section>
 
-    <!-- Second Section: About -->
-    <section id="about" class="section scrollspy">
+    <section id="about" class="section scrollspy full-screen-section">
       <h3 class="page-title white-text teal">About</h3>
-      <div class="container flow-text">
-        <!-- <blockquote>
-          <h2>
-            A Software Developer with a passion for Backend Development and Artificial Intelligence.
-
-          </h2>
-        </blockquote> -->        
+      <div class="section-content">
         <p>
-          Mahrukh's about section. 
+          Mahrukh's about section.
         </p>
-        <p>
-          <ul>
-            <li><b>Languages:</b> Python, C#, MATLAB </li>
-            <li><b>Databases:</b> Neo4j </li>
-            <li><b>Frameworks:</b> PyTorch </li>
-            <li><b>Tools & Technologies:</b> Git, Docker, AWS, Arduino, Autodesk Fusion360, Adobe Lightroom</li>
-          </ul>
-          
-        </p>
-          
-        <!-- <p>
-          
-          Detail-oriented Software Developer with professional experience in Backend Development, Machine Learning, Computer Vision. I am adept in Python, Django, Flask, SQL, Machine Learning, Computer Vision.           
-        </p> -->
+        <ul>
+          <li><b>Languages:</b> Python, C#, MATLAB</li>
+          <li><b>Databases:</b> Neo4j</li>
+          <li><b>Frameworks:</b> PyTorch</li>
+          <li><b>Tools & Technologies:</b> Git, Docker, AWS, Arduino, Autodesk Fusion360, Adobe Lightroom</li>
+        </ul>
         <p>
           What am I looking for?
         </p>
-        <!-- <p>
-          Another Paragraph
-        </p>  -->
-        <!-- <p>
-        <strong>Current Focus</strong>:&nbsp;<a aria-label="Navigate to the Inclusive Design Patterns homepage"
-          href="https://www.smashingmagazine.com/inclusive-design-patterns/">Accessibility</a>&nbsp;//&nbsp;<a
-          aria-label="Navigate to the Full Stack React homepage"
-          href="https://www.fullstackreact.com/">React</a>&nbsp;//&nbsp;<a
-          aria-label='Navigate to the article "Scalable CSS"'
-          href="https://mrmrs.github.io/writing/2016/03/24/scalable-css/">Design Systems</a>
-        </p> -->
       </div>
     </section>
 
 
     <!-- Third Section: Experience -->
-    <section id="experience" class="section scrollspy">
+    <section id="experience" class="section scrollspy full-screen-section">
       <h3 class="page-title white-text teal">Experience</h3>
-      <div class="container">
-
-        <!-- Latest Experience -->
+      <div class="section-content">
+    
         <div class="card">
           <div class="card-content">
             <div class="row">
               <div class="col s12 m2">
-                <a href="LINK" target="_blank"><img alt=""
-                    src="ADD IMAGE" class="responsive-img center-block" /></a>
+                <a href="LINK" target="_blank"><img alt="" src="ADD IMAGE" class="responsive-img center-block" /></a>
               </div>
-              <!-- <div class="col s12 m10"> -->
+    
               <div class="col s12 m10">
                 <p>
-                  <span class="card-title"><a href="" target="_blank"
-                      class="teal-text hoverline">Project Name</a></span>
+                  <span class="card-title">
+                    <a href="" target="_blank" class="teal-text hoverline">Project Name</a>
+                  </span>
                 </p>
               </div>
             </div>
+    
             <div class="role brown-text text-darken-2">Role</div>
+    
             <ul>
-              <li>
-                Description 1
-              </li>
-              <li>
-               Description 2
-              </li>
+              <li>Description 1</li>
+              <li>Description 2</li>
               <li>Description 3</li>
               <li>Description 4</li>
-              <li>
-                <b>Tools:</b> Tools used
-              </li>
+              <li><b>Tools:</b> Tools used</li>
             </ul>
           </div>
+    
           <div class="card-action">
             <span>Time Period</span>
           </div>
         </div>
-
-        
-        <!-- <div class="card">
-          <div class="card-content">
-            <div class="row">
-              <div class="col s12 m2">
-                <a href="https://www.meditab.com" target="_blank"><img alt="Meditab logo"
-                    src="/assets/img/exp-meditab-logo-500x500.jpg" class="responsive-img center-block" /></a>
-              </div>
-            
-              <div class="col s12 m10">
-                <p>
-                  <span class="card-title"><a href="http://meditab.com" target="_blank"
-                      class="teal-text hoverline">Meditab</a></span>
-                </p>
-              </div>
-            </div>
-            <div class="role brown-text text-darken-2">Programmer Analyst</div>
-            <ul>
-              <li>
-                Customized a tree-based optimization algorithm that separates drugs into distinct groups to maximize the concurrent execution of drug
-dispenser robots; improved an optimization algorithm that reduced the cycle-time of the automation process by 25%.
-              </li>
-              <li>
-                Devised a customized recursion algorithm to extend the functionality of the current environment to a multi-robot and multi-system
-environment
-              </li>
-              <li>
-                Built a modular video analytics app using Flask, OpenCV that tracks the location of each human in a multi-camera environment;
-utilized perspective transformation, object detection, and object tracking to find the location of a human.
-              </li>
-              <li>Increased the speed of the video analytics app by 20% by using a customized YOLOv3 algorithm to perform object detection and
-                DeepSORT algorithm for multi-object tracking.</li>
-              <li>
-                <b>Tools:</b> Python, Flask, OpenCV, Keras, Tensorflow, PyTorch
-              </li>
-            </ul>
-          </div>
-          <div class="card-action">
-            <span>Dec 2018 - July 2019 | Ahmedabad, India</span>
-          </div>
-        </div> -->
-
-        <!-- Experience 2 -->
-        <div class="card">
-          <div class="card-content">
-            <div class="row">
-              <div class="col s12 m2">
-                <img alt="" src="" class="" />
-
-              </div>
-
-              <!-- <div class="col s12 m10"> -->
-              <div class="col s12 m10">
-                <p>
-                  <span class="card-title"><a href="#experience" class="teal-text hoverline">Project Name</a></span>
-                </p>
-              </div>
-            </div>
-            <div class="role brown-text text-darken-2">Role</div>
-            <ul>
-              <li>
-               Desc 1
-              </li>
-              <li>
-               Desc 2
-              </li>
-              <li>
-                <b>Tools:</b> Tools used
-              </li>
-            </ul>
-          </div>
-          <div class="card-action">
-            <span>Time period</span>
-          </div>
-        </div>
+    
+      </div> <!-- ✅ Closing section-content -->
+    </section> <!-- ✅ Closing Experience section -->
 
 
     <!-- Fourth Section: Projects -->
-    <section id="projects" class="section scrollspy">
+    <section id="projects" class="section scrollspy full-screen-section">
       <h3 class="page-title white-text teal">Projects</h3>
-      <div class="container">
+      <div class="section-content">
         <div class="row">
-
+    
           <div class="col s12 m6 l4">
             <div class="card medium">
               <div class="card-image waves-effect waves-block waves-light">
                 <img alt="music streaming app" src="/assets/img/project-music-player.png" style="height: 100%; width: 100%" class="activator" />
               </div>
               <div class="card-content">
-                <span class="card-title activator teal-text hoverline">More projects<i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>
-                
-                </p>
+                <span class="card-title activator teal-text hoverline">More projects<i class="mdi-navigation-more-vert right"></i></span>
+                <p></p>
               </div>
               <div class="card-reveal">
-                <!-- TODO: change this -- only close button -->
-                <!-- <span class="card-title brown-text">Accomplishments<i class="mdi-navigation-close right"></i></span> -->
-                <span class="card-title grey-text"><small>Accomplishments</small><i
-                    class="mdi-navigation-close right"></i></span>
+                <span class="card-title grey-text"><small>Accomplishments</small><i class="mdi-navigation-close right"></i></span>
                 <ul>
                   <li><b>Tools:</b> Django, HTML, CSS, Bootstrap, SQLite, AWS S3, Heroku</li>
                   <li>Register/login to the web app(with OAuth-based Google Sign-In).</li>
                   <li>Search and filter songs based on language and singer.</li>
                   <li>Create multiple playlists and add/remove songs to/from playlist.</li>
                   <li>Scroll through recently played/viewed songs.</li>
-
-
                 </ul>
                 <div class="card-action">
-                  <a aria-label="Visit " href="https://galvanic-music.herokuapp.com/" target="_blank" data-position="top"
-                    data-tooltip="View Online"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-external-link"></i></a>
-                  <a aria-label="Visit the GitHub repo for  project" href="https://github.com/varadbhogayata/music-player"
-                    target="_blank" data-position="top" data-tooltip="View Source"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-github"></i></a>
+                  <a aria-label="Visit " href="https://galvanic-music.herokuapp.com/" target="_blank" class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i class="fa fa-external-link"></i></a>
+                  <a aria-label="Visit the GitHub repo for project" href="https://github.com/varadbhogayata/music-player" target="_blank" class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i class="fa fa-github"></i></a>
                 </div>
               </div>
             </div>
           </div>
-
+    
           <div class="col s12 m6 l4">
             <div class="card medium">
               <div class="card-image waves-effect waves-block waves-light">
                 <img alt="quiz app" src="/assets/img/project-quizup-logo-1.png" style="height: 100%; width: 100%" class="activator" />
               </div>
               <div class="card-content">
-                <span class="card-title activator teal-text hoverline">Quiz Web-App<i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>
-                  A quiz playing web app based on Django
-                </p>
+                <span class="card-title activator teal-text hoverline">Quiz Web-App<i class="mdi-navigation-more-vert right"></i></span>
+                <p>A quiz playing web app based on Django</p>
               </div>
               <div class="card-reveal">
-                <!-- TODO: change this -- only close button -->
-                <!-- <span class="card-title brown-text">Accomplishments<i class="mdi-navigation-close right"></i></span> -->
-                <span class="card-title grey-text"><small>Accomplishments</small><i
-                    class="mdi-navigation-close right"></i></span>
+                <span class="card-title grey-text"><small>Accomplishments</small><i class="mdi-navigation-close right"></i></span>
                 <ul>
                   <li><b>Tools:</b> Django, HTML, CSS, Bootstrap, SQLite, Heroku</li>
                   <li>Register/login to the web app(with OAuth-based Google Sign-In).</li>
                   <li>Play Quiz and see the leaderboard</li>
-
                 </ul>
                 <div class="card-action">
-                  <a aria-label="Visit " href="https://quiz-up-app.herokuapp.com/" target="_blank" data-position="top"
-                    data-tooltip="View Online"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-external-link"></i></a>
-                  <a aria-label="Visit the GitHub repo for  project" href="https://github.com/varadbhogayata/QuizUp"
-                    target="_blank" data-position="top" data-tooltip="View Source"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-github"></i></a>
+                  <a aria-label="Visit " href="https://quiz-up-app.herokuapp.com/" target="_blank" class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i class="fa fa-external-link"></i></a>
+                  <a aria-label="Visit the GitHub repo for project" href="https://github.com/varadbhogayata/QuizUp" target="_blank" class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i class="fa fa-github"></i></a>
                 </div>
               </div>
             </div>
           </div>
-    </section>
+    
+        </div> <!-- ✅ Closing row -->
+      </div> <!-- ✅ Closing section-content -->
+    </section> <!-- ✅ Closing Projects section -->
 
     <!-- Fifth Section: Skills -->
-    <section id="skills" class="section scrollspy">
+    <section id="skills" class="section scrollspy full-screen-section">
       <h3 class="page-title white-text teal">Skills</h3>
-      <div class="container">
-        <!-- Languages and Databases -->
+      <div class="section-content">
+    
         <div class="card">
           <div class="card-content">
             <h4 class="brown-text light">Languages and Databases</h4>
@@ -505,120 +368,16 @@ utilized perspective transformation, object detection, and object tracking to fi
                 <img alt="" src="/assets/img/shell-logo-1-300x300.jpg" class="responsive-img" />Shell Scripting
               </div>
             </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-content">
-            <h4 class="brown-text light">Libraries</h4>
-            <div class="row text-center">
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/numpy-logo-1-500x500.jpg" class="responsive-img" />NumPy
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/pandas-logo-2-500x500.jpg" class="responsive-img" />Pandas
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/opencv-logo-1-500x500.jpg" class="responsive-img" />OpenCV
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/sk-learn-logo-1-500x500.jpg" class="responsive-img" />scikit-learn
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/matplotlib-logo-1-500x500.jpg" class="responsive-img" />matplotlib
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Frameworks -->
-        <div class="card">
-          <div class="card-content">
-            <h4 class="brown-text light">Frameworks</h4>
-            <div class="row text-center">
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/django-logo.webp" class="responsive-img" />Django
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/flask-logo.png" class="responsive-img" />Flask
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/bootstrap.png" class="responsive-img" />Bootstrap
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/keras-logo.png" class="responsive-img" />Keras
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/tensorflow-logo-1.png" class="responsive-img" />TensorFlow
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/pytorch-logo.png" class="responsive-img" />PyTorch
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Other -->
-        <div class="card">
-          <div class="card-content">
-            <h4 class="brown-text light">Other</h4>
-            <div class="row text-center">
-
-
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/git.png" class="responsive-img" />Git
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/aws.png" class="responsive-img" />AWS
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="/assets/img/heroku.png" class="responsive-img" />Heroku
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- certifications -->
-        <!-- <div class="card">
-          <div class="card-content">
-            <h4 class="brown-text light">Certificates</h4>
-            <div class="row text-left">
-              <div class="container">
-                <div class="row">
-                  <div class="col s12 m6 l6">
-                    <div class="card">
-                      <div class="card-image">
-                        <img src="/assets/img/mooc-machine-learning-coursera-800x500.jpg">
-                      </div>
-                      <div class="card-content">
-                        <span class="card-title teal-text">Machine Learning (Stanford)</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col s12 m6 l6">
-                    <div class="card">
-                      <div class="card-image">
-                        <img src="/assets/img/mooc-algorithms-stanford-2-800x500.jpg">
-                      </div>
-                      <div class="card-content">
-                        <span class="card-title teal-text">Algorithms (Stanford)</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> -->
-
-      </div>
-    </section>
+          </div> <!-- ✅ Closing card-content -->
+        </div> <!-- ✅ Closing card -->
+    
+      </div> <!-- ✅ Closing section-content -->
+    </section> <!-- ✅ Closing Skills section -->
 
     <!-- Seventh Section: Education -->
-    <section id="education" class="section scrollspy">
+    <section id="education" class="section scrollspy full-screen-section">
       <h3 class="page-title white-text teal">Education</h3>
-      <div class="container">
+      <div class="section-content">
         <div class="row">
           <!-- Education -->
           <div class="col s12 m6 l6">
@@ -683,9 +442,9 @@ utilized perspective transformation, object detection, and object tracking to fi
     </section>
 
     <!-- Eight Section: Contact -->
-    <section id="contact" class="section scrollspy full-height">
+    <section id="contact" class="section scrollspy full-screen-section">
       <h3 class="page-title white-text teal">Contact</h3>
-      <div class="container">
+      <div class="section-content">
         <p>
           <a aria-label="Call Mahrukh" data-position="top" data-tooltip="Call Mahrukh"
             class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i class="fa fa-phone"></i><a
@@ -726,24 +485,34 @@ utilized perspective transformation, object detection, and object tracking to fi
     });
   </script>
 
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- Materialize JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-  <!-- jQuery-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+  // Initialize sidenav
+  var sidenavs = document.querySelectorAll('.sidenav');
+  M.Sidenav.init(sidenavs, {
+    edge: 'left'
+  });
 
-  <!-- Materialize - Compiled and minified JavaScript-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/js/materialize.min.js"></script>
-  <script>
-    // Materialize - Initializers
-    $(document).ready(function () {
-      $(".scrollspy").scrollSpy()
-      // Initialize collapse button
-      $(".button-collapse").sideNav({
-        menuWidth: 190, // Default is 240
-        edge: "left", // Choose the horizontal origin
-        closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
-      })
-    })
-  </script>
+  // Initialize carousel
+  var carousels = document.querySelectorAll('.carousel');
+  M.Carousel.init(carousels, {
+    fullWidth: true,
+    indicators: true
+  });
+
+  // Autoplay carousel
+  setInterval(function () {
+    var instance = M.Carousel.getInstance(document.querySelector('.carousel'));
+    instance.next();
+  }, 3000);
+});
+</script>
+  
 </body>
 
 </html>
