@@ -5,22 +5,29 @@
   padding: 0;
 }
 
+main {
+  flex: 1;
+}
+
 body {
   font-family: 'Nunito', sans-serif;
-  background-color: #F6F5F3; /* Off-White Gray */
-  color: #1556A0; /* Sapphire Blue */
+  background-color: #F6F5F3;
+  color: #1556A0;
   line-height: 1.6;
   text-align: center;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 h1, h2 {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 900;
+  font-weight: 600;
 }
 
 h2 {
-  font-size: 32px;
+  font-size: 1.5rem;
   margin-bottom: 10px;
 }
 
@@ -28,18 +35,21 @@ h2 {
 
 .header {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-top: 0;
+  position: relative;
+  padding-bottom: 3rem;
 }
 
 .header-left {
   display: flex;
-  align-items: center; /* ensures vertical center alignment */
-  gap: 1.5rem; /* spacing between badge and qualities */
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
   margin-top: -35px;
   margin-left: -32px;
 }
@@ -51,23 +61,24 @@ h2 {
   display: flex;
   align-items: center;
   gap: 1rem;
-  position: relative;  /* Necessary for absolute positioning */
-  overflow: visible;   /* Allow overflow */
-  height: 80px;        /* 👈 Fix the height */
+  position: relative;
+  margin-left: 32px;
+  overflow: visible;
+  height: 80px;
 }
 
 .badge-photo {
   position: absolute;
-  top: 50%;
-  left: 0px;        /* Pulls image to the left */
-  transform: translateY(-50%);
+  top: 360;
+  left: 0;
   width: 100px;
   height: 100px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 0 0 3px #f6f5f3; /* Optional border blend with background */
+  box-shadow: 0 0 0 3px #f6f5f3;
   z-index: 2;
 }
+
 .name {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.8rem;
@@ -84,7 +95,7 @@ h2 {
 /* Tagline */
 .tagline {
   font-style: italic;
-  font-size: 20px;
+  font-size: 1.25rem;
   color: #333;
   margin: 20px auto;
   max-width: 700px;
@@ -97,10 +108,11 @@ h2 {
 
 .nav a {
   text-decoration: none;
-  color: #5AA0A0; /* Ocean Teal */
+  color: #5AA0A0;
+  font-family: 'sans-serif';
   font-weight: 600;
   margin: 0 15px;
-  font-size: 18px;
+  font-size: 1.125rem;
   transition: color 0.3s ease;
 }
 
@@ -110,12 +122,12 @@ h2 {
 
 /* Contact Button */
 .contact-button {
-  background-color: #F76C5E; /* Warm Coral */
+  background-color: #F76C5E;
   color: #F6F5F3;
   border: none;
   padding: 12px 28px;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 1rem;
   border-radius: 30px;
   cursor: pointer;
   margin-top: 20px;
@@ -131,18 +143,13 @@ h2 {
   padding: 60px 20px;
 }
 
-.brewing {
-  background-color: #6FAE4F; /* Fresh Green */
-  color: #F6F5F3;
-}
-
 .finished {
-  background-color: #5AA0A0; /* Ocean Teal */
+  background-color: #5AA0A0;
   color: #F6F5F3;
 }
 
 .resume {
-  background-color: #F6F5F3; /* Off-White Gray */
+  background-color: #F6F5F3;
   color: #1556A0;
 }
 
@@ -150,7 +157,7 @@ h2 {
 .divider-accent {
   width: 50px;
   height: 5px;
-  background-color: #F76C5E; /* Warm Coral */
+  background-color: #F76C5E;
   margin: 0 auto 20px;
   border-radius: 5px;
 }
@@ -164,8 +171,8 @@ h2 {
   padding: 15px 20px;
   border-radius: 10px;
   display: inline-block;
-  box-shadow: 3px 3px 0 #6FAE4F;
-  font-size: 18px;
+  box-shadow: 3px 3px 0 #5AA0A0;
+  font-size: 1.125rem;
 }
 
 .yellow-emphasis {
@@ -178,11 +185,11 @@ h2 {
 
 /* Footer */
 .footer {
-  background-color: #1556A0; /* Sapphire Blue */
+  background-color: #6FAE4F;
   color: #F6F5F3;
-  padding: 30px 20px;
-  margin-top: 40px;
-  font-size: 14px;
+  padding: 5px 20px;
+  font-size: 0.875rem;
+  margin-top: 20px;
 }
 
 /* Smooth scrolling */
@@ -192,19 +199,285 @@ html {
 
 .qualities-line {
   display: flex;
-  align-items: center; /* THIS is the key: ensures vertical center alignment with badge */
+  align-items: center;
   font-size: 1.8rem;
   font-weight: bold;
   font-family: sans-serif;
   color: #f76c5e;
   gap: 0.5rem;
-  margin-top: 9px;
+  margin-top: 1px;
 }
 
 .typed-cursor {
-  font-size: 1.6rem; /* Match the font-size of your animated text */
+  font-size: 1.8rem;
   line-height: 1;
-  transform: scaleY(1.3); /* Makes the cursor a little taller */
-  margin-left: -5px; /* 👈 pulls cursor closer */
+  transform: scaleY(1.3);
+  margin-left: -11px;
+}
 
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .header-left {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+  }
+  .header-right {
+    min-width: unset;
+  }
+  .name-badge {
+    padding-left: 6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .name {
+    font-size: 1.5rem;
+  }
+  .typed-cursor {
+    font-size: 1.5rem;
+  }
+  .badge-photo {
+    width: 80px;
+    height: 80px;
+  }
+  .nav a {
+    margin: 0 10px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .highlight-box, .tagline {
+    padding: 10px 15px;
+    font-size: 1rem;
+  }
+  .section {
+    padding: 40px 10px;
+  }
+  .badge-photo{
+    left: -2px;
+  }
+}
+
+
+.main-nav {
+  background-color: #6FAE4F;
+  padding: 0.6rem 0;
+  border-radius: 0;
+  width: 100%;
+  box-shadow: none;
+  margin-top: 0.5rem;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px; /* Adjust spacing between links */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.nav-links li {
+  display: inline-block; /* Ensure each link is in its own block */
+}
+
+.nav-links li a {
+  color: #F6F5F3;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #F76C5E; /* Warm Coral */
+}
+
+.brewing-swiper {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.swiper-slide {
+   background: #f6f5f3;
+  color: #1556A0;
+  border-radius: 12px;
+  padding: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 3px 3px 0 #f76c5e;
+}
+
+.section.brewing {
+  padding-top: 20px;  /* Reduced from 60px */
+  padding-bottom: 40px;
+  background-color: #F6F5F3; /* Fresh Green */
+  color: #1556A0;
+}
+.header {
+  display: flex;
+  flex-direction: column; /* make it vertical */
+  align-items: center;
+  padding: 2rem;
+  gap: 1rem;
+  position: sticky;
+  top: 0;
+  background-color: #F6F5F3;
+  z-index: 1000;
+}
+
+.header-top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 0.1rem;
+}
+
+.header-right-icons {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  font-size: 2rem;
+  margin-top: -26px;
+}
+
+.header-right-icons a {
+  color: #1556A0; /* or any color you like */
+  transition: color 0.3s ease;
+}
+
+.header-right-icons a:hover {
+  color: #F76C5E; /* coral on hover */
+}
+
+.carousel-image {
+  width: 100%;
+  max-width: 300px; /* adjust as needed */
+  height: 330px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.update-card {
+  background-color: #fff;
+  border-radius: 12px;
+  width: 280px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.update-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-image {
+  background-color: #ddd; /* Placeholder gray */
+  height: 160px;
+  width: 100%;
+}
+
+.card-content {
+  padding: 15px;
+  color: #1556A0;
+  font-family: 'Nunito', sans-serif;
+}
+
+.card-description {
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.card-date {
+  font-size: 0.8rem;
+  color: #5AA0A0;
+  font-weight: 500;
+}
+
+.load-more-btn {
+  margin-top: 30px;
+  background-color: #F76C5E;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.load-more-btn:hover {
+  background-color: #d14f42;
+}
+
+/* Resume Page Styles */
+.resume {
+  background-color: #F6F5F3;
+  color: #1556A0;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Nunito', sans-serif;
+  line-height: 1.8;
+  text-align: left;
+}
+
+.resume section {
+  margin-bottom: 40px;
+}
+
+.resume h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4rem;
+  color: #F76C5E;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #5AA0A0;
+  padding-bottom: 5px;
+}
+
+.resume p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+.resume ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.resume ul li {
+  margin-bottom: 8px;
+}
+
+.resume strong {
+  font-weight: 700;
+}
+
+/* Print-friendly support */
+@media print {
+  .header, .main-nav, .footer {
+    display: none;
+  }
+  .resume {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    color: black;
+    background: white;
+  }
 }

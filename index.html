@@ -7,54 +7,148 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <body>
   <div class="background-art"></div>
 
  <header class="header">
-  <div class="header-left">
-    <div class="name-badge">
-      <img src="assets/img/MainPhoto.png" alt="Mahrukh Tauseef" class="badge-photo" />
-      <h1 class="name">Mahrukh Tauseef</h1>
-    </div> 
-    <div class="qualities-line">
-    <span class="typing"></span>
+  <div class="header-top">
+
+    <div class="header-left">
+      <div class="name-badge">
+        <img src="assets/img/MainPhoto.png" alt="Mahrukh Tauseef" class="badge-photo" />
+        <h1 class="name">Mahrukh Tauseef</h1>
+      </div> 
+      <div class="qualities-line">
+      <span class="typing"></span>
+      </div>
+    </div>
+
+    <div class="header-right-icons">
+      <a href="mailto:tauseefmahrukh@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/mahrukh-tauseef/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/mahrukhtauseef" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+    </div>
   </div>
-  </div>
+  <nav class="main-nav">
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#photography">Photography</a></li>
+    </ul>
+  </nav>
 </header>
 
+
+
+<main>
   <section class="section brewing">
-    <h2>Currently Brewing</h2>
-    <div class="divider-accent"></div>
-    <p class="highlight-box">
-      Projects I'm currently working on, with <span class="yellow-emphasis">love</span> and a little <span class="yellow-emphasis">chaos</span>.
-    </p>
-  </section>
-
-  <section class="section finished">
-    <h2>Finished Projects</h2>
-    <div class="divider-accent"></div>
-    <p>Ideas that made it to the other side. Fully formed, beautifully flawed.</p>
-  </section>
-
-  <section class="section resume">
-    <h2>Resume</h2>
-    <div class="divider-accent"></div>
-    <p>A quick peek at my experience, education, and everything between.</p>
-  </section>
-
+  <h2>What's new?</h2>
+  <div class="divider-accent"></div>
+  <div id="card-container" class="card-container"></div>
+   <button id="load-more" class="load-more-btn">Load More</button>
+</section>
+</main>
   <footer class="footer">
-    <p>&copy; 2025 Mahrukh Tauseef. Made with curiosity and coral.</p>
+    <p>&copy; 2025 Mahrukh Tauseef.</p>
   </footer>
 </body>
 </html>
 <script>
   var typed = new Typed('.typing', {
-    strings: ["is a learning enthusiast", "builds thoughtfully", "codes with empathy","is fueled by the messiest challenges"],
+    strings: ["learns relentlessly", "builds thoughtfully", "fails optimistically"],
     typeSpeed: 100,
     backSpeed: 60,
     backDelay: 1000,
     loop: true
   });
-</script>
 
+  const brewingSwiper = new Swiper('.brewing-swiper', {
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    slidesPerView: 1,
+    spaceBetween: 20,
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      }
+    }
+  });
+
+  const updates = [
+    {
+      image: "assets/img/placeholder.png",
+      description: "Presented my research at CHI 2025.",
+      date: "2025-07-05"
+    },
+    {
+      image: "assets/img/placeholder.png",
+      description: "Launched Spellingo on GitHub.",
+      date: "2025-06-25"
+    },
+    {
+      image: "assets/img/placeholder.png",
+      description: "Built a plant monitoring IoT system.",
+      date: "2025-06-10"
+    },
+    {
+      image: "assets/img/placeholder.png",
+      description: "Published my first Medium article on AI.",
+      date: "2025-06-01"
+    },
+    {
+      image: "assets/img/placeholder.png",
+      description: "Started a new internship at Meta.",
+      date: "2025-05-20"
+    }
+    // Add more entries here...
+  ];
+
+  // Sort chronologically (newest first)
+  updates.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+  let loadedCount = 0;
+  const loadSize = 4;
+  const container = document.getElementById("card-container");
+  const loadMoreBtn = document.getElementById("load-more");
+
+  function loadCards() {
+    const nextBatch = updates.slice(loadedCount, loadedCount + loadSize);
+    nextBatch.forEach(update => {
+      const card = document.createElement("div");
+      card.className = "update-card";
+      card.innerHTML = `
+        <img src="${update.image}" alt="Update image" />
+        <div class="date">${new Date(update.date).toLocaleString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</div>
+        <div class="description">${update.description}</div>
+      `;
+      container.appendChild(card);
+    });
+    loadedCount += loadSize;
+    if (loadedCount >= updates.length) {
+      loadMoreBtn.style.display = "none";
+    }
+  }
+
+  loadMoreBtn.addEventListener("click", loadCards);
+
+  // Load first batch on page load
+  window.addEventListener("DOMContentLoaded", loadCards);
+</script>
