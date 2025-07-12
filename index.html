@@ -13,8 +13,6 @@
 </head>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <body>
-  <div class="background-art"></div>
-
  <header class="header">
   <div class="header-top">
 
@@ -32,16 +30,18 @@
       <a href="mailto:tauseefmahrukh@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
       <a href="https://www.linkedin.com/in/mahrukh-tauseef/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
       <a href="https://github.com/mahrukhtauseef" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://scholar.google.com/citations?user=T_CnHToAAAAJ&hl=en&oi=ao" target="_blank" aria-label="Google Scholar"><i class="fa-brands fa-google-scholar"></i></a>
     </div>
   </div>
   <nav class="main-nav">
     <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#research">Research</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="resume.html">Resume</a></li>
-      <li><a href="#blog">Blog</a></li>
-      <li><a href="#photography">Photography</a></li>
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="research.html" class="nav-link">Research</a></li>
+      <li><a href="projects.html" class="nav-link">Projects</a></li>
+      <li><a href="resume.html" class="nav-link">Resume</a></li>
+      <li><a href="blog.html" class="nav-link">Blog</a></li>
+      <li><a href="photography.html" class="nav-link">Photography</a></li>
     </ul>
   </nav>
 </header>
@@ -63,60 +63,38 @@
 </html>
 <script>
   var typed = new Typed('.typing', {
-    strings: ["learns relentlessly", "builds thoughtfully", "fails optimistically"],
+    strings: ["engineer", "designer", "researcher", "problem-solver", "empath"],
     typeSpeed: 100,
     backSpeed: 60,
     backDelay: 1000,
     loop: true
   });
 
-  const brewingSwiper = new Swiper('.brewing-swiper', {
-    loop: true,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    slidesPerView: 1,
-    spaceBetween: 20,
-    breakpoints: {
-      768: {
-        slidesPerView: 2,
-      },
-      1024: {
-        slidesPerView: 3,
-      }
-    }
-  });
-
   const updates = [
     {
       image: "assets/img/placeholder.png",
-      description: "Presented my research at CHI 2025.",
-      date: "2025-07-05"
+      description: "Building with Meta's ARIA glasses.",
+      date: "2025-01-31",
+      link: "https://chi2025.org/paper/myresearch"
     },
     {
-      image: "assets/img/placeholder.png",
-      description: "Launched Spellingo on GitHub.",
-      date: "2025-06-25"
+      image: "assets/img/ISMARPresentation2024.jpg",
+      description: "Poster presentation at ISMAR 2024.",
+      date: "2024-10-24",
+      link: "https://ieeexplore.ieee.org/abstract/document/10765303?casa_token=zN6CMgYLq1UAAAAA:gZWg2QN0dJ6l9jr2W-8UBOMSDFgucPLlRhWxF4c6yLu6Hp3x8sOaURTl_R4crvF3Os1JnhHxNw"
+
     },
     {
-      image: "assets/img/placeholder.png",
-      description: "Built a plant monitoring IoT system.",
-      date: "2025-06-10"
+      image: "assets/img/Spellingo.png",
+      description: "A spelling app from scratch in 8 hours?",
+      date: "2025-06-10",
+      link: ""
     },
     {
-      image: "assets/img/placeholder.png",
-      description: "Published my first Medium article on AI.",
-      date: "2025-06-01"
-    },
-    {
-      image: "assets/img/placeholder.png",
-      description: "Started a new internship at Meta.",
-      date: "2025-05-20"
+      image: "assets/img/Google.jpg",
+      description: "Le Tour de Google",
+      date: "2025-05-9",
+      link: ""
     }
     // Add more entries here...
   ];
@@ -125,7 +103,7 @@
   updates.sort((a, b) => new Date(b.date) - new Date(a.date));
 
   let loadedCount = 0;
-  const loadSize = 4;
+  const loadSize = 5;
   const container = document.getElementById("card-container");
   const loadMoreBtn = document.getElementById("load-more");
 
@@ -135,8 +113,12 @@
       const card = document.createElement("div");
       card.className = "update-card";
       card.innerHTML = `
-        <img src="${update.image}" alt="Update image" />
-        <div class="date">${new Date(update.date).toLocaleString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</div>
+        <img src="${update.image}" alt="Update image" class="update-image" />
+        <div class="date">${(() => {
+  const [year, month, day] = update.date.split('-').map(Number);
+  const localDate = new Date(year, month - 1, day); // JS months are 0-indexed
+  return localDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+})()}</div>
         <div class="description">${update.description}</div>
       `;
       container.appendChild(card);
@@ -151,4 +133,12 @@
 
   // Load first batch on page load
   window.addEventListener("DOMContentLoaded", loadCards);
+  const links = document.querySelectorAll('.nav-link');
+  const currentPage = window.location.pathname.split('/').pop();
+
+  links.forEach(link => {
+    if (link.getAttribute('href') === currentPage) {
+      link.classList.add('active');
+    }
+  });
 </script>
