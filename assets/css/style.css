@@ -10,9 +10,9 @@ main {
 }
 
 body {
-  font-family: 'Nunito', sans-serif;
-  background-color: #F6F5F3;
-  color: #1556A0;
+  font-family: sans-serif;
+  background-color: #f5f2ed;
+  color: #000000;
   line-height: 1.6;
   text-align: center;
   padding: 20px;
@@ -22,13 +22,12 @@ body {
 }
 
 h1, h2 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: sans-serif;
   font-weight: 600;
 }
 
 h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+  font-size: 0.95rem;
 }
 
 /* Header styles */
@@ -56,15 +55,16 @@ h2 {
 
 .name-badge {
   background-color: #F76C5E;
-  border-radius: 30px;
-  padding: 1rem 2rem 1rem 8rem;
+  border-radius: 10px;
+  padding: 1rem 1rem 1rem 7rem;
   display: flex;
   align-items: center;
   gap: 1rem;
   position: relative;
   margin-left: 32px;
+  margin-top: 30PX;
   overflow: visible;
-  height: 80px;
+  height: 40px;
 }
 
 .badge-photo {
@@ -75,15 +75,17 @@ h2 {
   height: 100px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 0 0 3px #f6f5f3;
+  box-shadow: 0 0 0 3px #f5f2ed;
   z-index: 2;
+  margin-top: 23px;
+  margin-left: -3px;
 }
 
 .name {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #fff;
+  font-family: sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #f5f2ed;
   margin: 0;
 }
 
@@ -112,7 +114,7 @@ h2 {
   font-family: 'sans-serif';
   font-weight: 600;
   margin: 0 15px;
-  font-size: 1.125rem;
+  font-size: 0.95rem;
   transition: color 0.3s ease;
 }
 
@@ -123,11 +125,11 @@ h2 {
 /* Contact Button */
 .contact-button {
   background-color: #F76C5E;
-  color: #F6F5F3;
+  color: #f5f2ed;
   border: none;
   padding: 12px 28px;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.95rem;
   border-radius: 30px;
   cursor: pointer;
   margin-top: 20px;
@@ -143,41 +145,38 @@ h2 {
   padding: 60px 20px;
 }
 
-.finished {
-  background-color: #5AA0A0;
-  color: #F6F5F3;
-}
-
 .resume {
-  background-color: #F6F5F3;
-  color: #1556A0;
+  background-color:  #f5f2ed;
+  color: #000000;
+  font-size: 1rem;
 }
 
 /* Accent line */
 .divider-accent {
   width: 50px;
-  height: 5px;
+  height: 3px;
   background-color: #F76C5E;
-  margin: 0 auto 20px;
+  margin: auto;
+  margin-top: 0px;
   border-radius: 5px;
 }
 
 /* Highlight Box */
 .highlight-box {
-  background-color: #F6F5F3;
-  color: #1556A0;
+  background-color: #41a57d;
+  color: #000000;
   max-width: 600px;
   margin: 0 auto;
-  padding: 15px 20px;
+  padding: 8px 18px;
   border-radius: 10px;
   display: inline-block;
-  box-shadow: 3px 3px 0 #5AA0A0;
-  font-size: 1.125rem;
+  box-shadow: 3px 3px 0 #F76C5E;
+  font-size: 0.95rem;
 }
 
 .yellow-emphasis {
   background-color: #F76C5E;
-  color: #F6F5F3;
+  color:  #f5f2ed;
   padding: 2px 6px;
   border-radius: 4px;
   font-weight: 600;
@@ -185,11 +184,11 @@ h2 {
 
 /* Footer */
 .footer {
-  background-color: #6FAE4F;
-  color: #F6F5F3;
-  padding: 5px 20px;
-  font-size: 0.875rem;
-  margin-top: 20px;
+  background-color: #41a57d;
+  color:  #f5f2ed;
+  padding: 0px 0px;
+  font-size: 0.675rem;
+  margin-bottom: -10px;
 }
 
 /* Smooth scrolling */
@@ -200,17 +199,18 @@ html {
 .qualities-line {
   display: flex;
   align-items: center;
-  font-size: 1.8rem;
-  font-weight: bold;
+  font-size: 1rem;
+  font-weight: 800;
   font-family: sans-serif;
   color: #f76c5e;
   gap: 0.5rem;
-  margin-top: 1px;
+  margin-top: 30px;
+  margin-left: -15px;
 }
 
 .typed-cursor {
-  font-size: 1.8rem;
-  line-height: 1;
+  font-size: 1rem;
+  line-height: 0.8;
   transform: scaleY(1.3);
   margin-left: -11px;
 }
@@ -224,9 +224,6 @@ html {
   }
   .header-right {
     min-width: unset;
-  }
-  .name-badge {
-    padding-left: 6rem;
   }
 }
 
@@ -262,12 +259,13 @@ html {
 
 
 .main-nav {
-  background-color: #6FAE4F;
-  padding: 0.6rem 0;
+  background-color: #41a57d;
+  padding: 0rem 0;
   border-radius: 0;
-  width: 100%;
+  width: 96.8%;
   box-shadow: none;
-  margin-top: 0.5rem;
+  margin-top: -18px;
+  margin-left: 44px;
 }
 
 .nav-links {
@@ -285,10 +283,10 @@ html {
 }
 
 .nav-links li a {
-  color: #F6F5F3;
+  color:  #f5f2ed;
   text-decoration: none;
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 0.95rem;
   transition: color 0.3s ease;
 }
 
@@ -296,38 +294,24 @@ html {
   color: #F76C5E; /* Warm Coral */
 }
 
-.brewing-swiper {
-  width: 100%;
-  padding-top: 20px;
-  padding-bottom: 40px;
+.nav-link.active {
+  border-bottom: 4px solid #F76C5E;
 }
-
-.swiper-slide {
-   background: #f6f5f3;
-  color: #1556A0;
-  border-radius: 12px;
-  padding: 30px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  text-align: center;
-  box-shadow: 3px 3px 0 #f76c5e;
-}
-
 .section.brewing {
-  padding-top: 20px;  /* Reduced from 60px */
-  padding-bottom: 40px;
-  background-color: #F6F5F3; /* Fresh Green */
-  color: #1556A0;
+  padding-top: 10px;  /* Reduced from 60px */
+  padding-bottom: 10px;
+  background-color: #f5f2ed; /* Fresh Green */
+  color: #000000;
 }
 .header {
   display: flex;
   flex-direction: column; /* make it vertical */
   align-items: center;
-  padding: 2rem;
+  padding: 0.5rem;
   gap: 1rem;
   position: sticky;
   top: 0;
-  background-color: #F6F5F3;
+  background-color:  #f5f2ed;
   z-index: 1000;
 }
 
@@ -342,14 +326,14 @@ html {
 
 .header-right-icons {
   display: flex;
-  gap: 1.2rem;
+  gap: 1rem;
   align-items: center;
-  font-size: 2rem;
-  margin-top: -26px;
+  font-size: 1.5rem;
+  margin-top: -3px;
 }
 
 .header-right-icons a {
-  color: #1556A0; /* or any color you like */
+  color: #000000b1; /* or any color you like */
   transition: color 0.3s ease;
 }
 
@@ -357,26 +341,18 @@ html {
   color: #F76C5E; /* coral on hover */
 }
 
-.carousel-image {
-  width: 100%;
-  max-width: 300px; /* adjust as needed */
-  height: 330px;
-  border-radius: 10px;
-  margin-bottom: 15px;
-}
-
 .card-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
-  margin-top: 40px;
+  gap: 10px;
+  margin-top: 20px;
 }
 
 .update-card {
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 12px;
-  width: 280px;
+  width: 240px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   overflow: hidden;
   transition: transform 0.3s ease;
@@ -386,30 +362,28 @@ html {
   transform: translateY(-5px);
 }
 
-.card-image {
-  background-color: #ddd; /* Placeholder gray */
-  height: 160px;
-  width: 100%;
-}
-
-.card-content {
-  padding: 15px;
-  color: #1556A0;
-  font-family: 'Nunito', sans-serif;
-}
-
-.card-description {
-  font-size: 0.95rem;
-  margin-bottom: 10px;
-  font-weight: 600;
-}
-
-.card-date {
-  font-size: 0.8rem;
-  color: #5AA0A0;
+.update-card .date {
+  font-size: 0.7rem;  /* Adjust as needed */
+  color: #3c3c3ca1;         /* Optional: softer color */
+  margin-top: -8px;
   font-weight: 500;
 }
 
+.update-card .description {
+  font-size: 0.75rem;     /* Adjust as needed */
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+  margin-top: 2px;
+  font-weight: 550;
+  color: #3c3c3cb8;      /* Your main text color */
+}
+
+.update-card .update-image {
+  width: 90%;
+  height: 240px;
+  object-fit: contain;
+  background-color: #ffffff;
+}
 .load-more-btn {
   margin-top: 30px;
   background-color: #F76C5E;
@@ -427,12 +401,12 @@ html {
 
 /* Resume Page Styles */
 .resume {
-  background-color: #F6F5F3;
-  color: #1556A0;
+  background-color:  #f5f2ed;
+  color: #000000;
   max-width: 800px;
   margin: 0 auto;
   padding: 40px 20px;
-  font-family: 'Nunito', sans-serif;
+  font-family: sans-serif;
   line-height: 1.8;
   text-align: left;
 }
@@ -442,16 +416,16 @@ html {
 }
 
 .resume h3 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.4rem;
+  font-family: sans-serif;
+  font-size: 1rem;
   color: #F76C5E;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   border-bottom: 2px solid #5AA0A0;
-  padding-bottom: 5px;
+  padding-bottom: 0px;
 }
 
 .resume p {
-  font-size: 1rem;
+  font-size: 0.9rem;
   margin: 5px 0;
 }
 
@@ -461,11 +435,12 @@ html {
 }
 
 .resume ul li {
-  margin-bottom: 8px;
+  margin-bottom: 2px;
+  font-size: 0.9rem;
 }
 
 .resume strong {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 /* Print-friendly support */
@@ -480,4 +455,40 @@ html {
     color: black;
     background: white;
   }
+}
+
+.left-panel {
+  position: fixed;
+  top: 100px; /* Changed from 13% to a fixed pixel value */
+  right: 2.19%;
+  z-index: 999; /* Ensures it stays above other content if needed */
+}
+
+.left-panel a.download-btn {
+  color:  #f5f2ed;
+  font-size: 1rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.left-panel a.download-btn i {
+  font-size: 1rem;
+}
+
+.edu-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap; /* optional, for smaller screens */
+  margin-bottom: 0.1rem;
+  font-size: 0.9rem;
+}
+
+.edu-date {
+  white-space: nowrap;
+  font-size: 0.9rem;
+  margin: 5px 0;
 }
