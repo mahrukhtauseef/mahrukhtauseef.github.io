@@ -32,29 +32,31 @@
       <a href="https://github.com/mahrukhtauseef" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
       <a href="https://scholar.google.com/citations?user=T_CnHToAAAAJ&hl=en&oi=ao" target="_blank" aria-label="Google Scholar"><i class="fa-brands fa-google-scholar"></i></a>
     </div>
-  </div>
-  <nav class="main-nav">
+     <nav class="main-nav">
     <ul class="nav-links">
       <li><a href="index.html" class="nav-link">Home</a></li>
       <li><a href="about.html" class="nav-link">About</a></li>
       <li><a href="research.html" class="nav-link">Research</a></li>
       <li><a href="projects.html" class="nav-link">Projects</a></li>
       <li><a href="resume.html" class="nav-link">Resume</a></li>
-      <li><a href="blog.html" class="nav-link">Blog</a></li>
+      <li><a href="reflections.html" class="nav-link">Reflections</a></li>
       <li><a href="photography.html" class="nav-link">Photography</a></li>
     </ul>
   </nav>
+  </div>
+ 
 </header>
 
 
 
-<main>
-  <section class="section brewing">
-  <h2>Development in Progress</h2>
+<main style="padding-bottom: 10px;">
+  <p class="tagline">
+    Hi! I am <strong><span style="color:#f76c5e;">Mahrukh</span></strong>. I found my calling in <strong><span style="color:#f76c5e;">tech</span></strong> and I love <strong><span style="color:#f76c5e;">building things that matter</span></strong>. These days, I am working on a mix of projects in Human-Computer Interaction, Augmented Reality, Artificial Intelligence, and Product Development.
+  </p>
+  <h2>What's new?</h2>
   <div class="divider-accent"></div>
   <div id="card-container" class="card-container"></div>
    <button id="load-more" class="load-more-btn">Load More</button>
-</section>
 </main>
   <footer class="footer">
     <p>&copy; 2025 Mahrukh Tauseef.</p>
@@ -75,25 +77,44 @@
       image: "assets/img/placeholder.png",
       description: "Building with Meta's ARIA glasses.",
       date: "2025-01-31",
+      category: "Research",
       link: "https://chi2025.org/paper/myresearch"
     },
     {
       image: "assets/img/ISMARPresentation2024.jpg",
       description: "Poster presentation at ISMAR 2024.",
       date: "2024-10-24",
+      category: "Research",
       link: "https://ieeexplore.ieee.org/abstract/document/10765303?casa_token=zN6CMgYLq1UAAAAA:gZWg2QN0dJ6l9jr2W-8UBOMSDFgucPLlRhWxF4c6yLu6Hp3x8sOaURTl_R4crvF3Os1JnhHxNw"
-
     },
     {
       image: "assets/img/Spellingo.png",
       description: "A spelling app from scratch in 8 hours?",
       date: "2025-06-10",
+      category: "Project",
       link: ""
     },
     {
       image: "assets/img/Google.jpg",
       description: "Le Tour de Google",
       date: "2025-05-9",
+      category: "Reflection",
+      link: ""
+    },
+
+    {
+      image: "assets/img/Mindy.png",
+      description: "Mindy- A Dementia Aware AI Agent",
+      date: "2024-01-01",
+      category: "Project",
+      link: ""
+    }
+    ,
+    {
+      image: "assets/img/placeholder.png",
+      description: "Electronics Bootcamp",
+      date: "2025-06-23",
+      category: "Reflection",
       link: ""
     }
     // Add more entries here...
@@ -111,16 +132,21 @@
     const nextBatch = updates.slice(loadedCount, loadedCount + loadSize);
     nextBatch.forEach(update => {
       const card = document.createElement("div");
-      card.className = "update-card";
+      const formattedDate = (() => {
+        const [year, month, day] = update.date.split('-').map(Number);
+        const localDate = new Date(year, month - 1, day);
+        return localDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+      })();
+
       card.innerHTML = `
-        <img src="${update.image}" alt="Update image" class="update-image" />
-        <div class="date">${(() => {
-  const [year, month, day] = update.date.split('-').map(Number);
-  const localDate = new Date(year, month - 1, day); // JS months are 0-indexed
-  return localDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
-})()}</div>
-        <div class="description">${update.description}</div>
+        <a href="${update.link || '#'}" ${update.link ? 'target="_blank"' : ''} class="card-link">
+          <div class="card-category">${update.category}</div>
+          <img src="${update.image}" alt="Update image" class="update-image" />
+          <div class="date">${formattedDate}</div>
+          <div class="description">${update.description}</div>
+        </a>
       `;
+      card.classList.add("update-card");
       container.appendChild(card);
     });
     loadedCount += loadSize;

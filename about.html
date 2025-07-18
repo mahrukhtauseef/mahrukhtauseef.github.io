@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Resume | Mahrukh Tauseef</title>
+  <title>About | Mahrukh Tauseef</title>
   <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
-<body>
-  <header class="header">
+<body class="about-page">
+   <header class="header">
   <div class="header-top">
 
     <div class="header-left">
@@ -16,6 +16,9 @@
         <img src="assets/img/MainPhoto.png" alt="Mahrukh Tauseef" class="badge-photo" />
         <h1 class="name">Mahrukh Tauseef</h1>
       </div> 
+      <div class="qualities-line">
+      <span class="typing"></span>
+      </div>
     </div>
 
     <div class="header-right-icons">
@@ -24,19 +27,37 @@
       <a href="https://github.com/mahrukhtauseef" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
       <a href="https://scholar.google.com/citations?user=T_CnHToAAAAJ&hl=en&oi=ao" target="_blank" aria-label="Google Scholar"><i class="fa-brands fa-google-scholar"></i></a>
     </div>
-  </div>
-  <nav class="main-nav">
+     <nav class="main-nav">
     <ul class="nav-links">
       <li><a href="index.html" class="nav-link">Home</a></li>
       <li><a href="about.html" class="nav-link">About</a></li>
       <li><a href="research.html" class="nav-link">Research</a></li>
       <li><a href="projects.html" class="nav-link">Projects</a></li>
       <li><a href="resume.html" class="nav-link">Resume</a></li>
-      <li><a href="blog.html" class="nav-link">Blog</a></li>
+      <li><a href="reflections.html" class="nav-link">Reflections</a></li>
       <li><a href="photography.html" class="nav-link">Photography</a></li>
     </ul>
   </nav>
+  </div>
+ 
 </header>
+  <div class="about-container">
+  <aside class="timeline-track">
+    <ul class="timeline-dots">
+      <li><a href="#present" class="dot active" data-label="Present"></a></li>
+      <li><a href="#college" class="dot" data-label="College"></a></li>
+      <li><a href="#highschool" class="dot" data-label="High School"></a></li>
+      <li><a href="#baby" class="dot" data-label="Baby Mahrukh"></a></li>
+    </ul>
+  </aside>
+
+  <main class="timeline-sections">
+    <section id="present"><h2>Now</h2><p>...</p></section>
+    <section id="college"><h2>College</h2><p>...</p></section>
+    <section id="highschool"><h2>High School</h2><p>...</p></section>
+    <section id="baby"><h2>Baby Mahrukh</h2><p>...</p></section>
+  </main>
+</div>
    <footer class="footer">
     <p>&copy; 2025 Mahrukh Tauseef. All rights reserved.</p>
   </footer>
@@ -52,4 +73,47 @@
       link.classList.add('active');
     }
   });
+
+  const sections = document.querySelectorAll("main section");
+  const dots = document.querySelectorAll(".dot");
+
+  // Position dots dynamically based on number of sections
+  dots.forEach((dot, i) => {
+    dot.parentElement.style.top = `${(i / (dots.length - 1)) * 100}%`;
+
+    // Scroll into view on click (instead of default jump)
+    dot.addEventListener("click", function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute("href").substring(1);
+      const targetSection = document.getElementById(targetId);
+      if (targetSection) {
+        const offsetTop = targetSection.offsetTop;
+        const headerOffset = 80; // Adjust to match your header height
+        window.scrollTo({
+          top: offsetTop - headerOffset,
+          behavior: "smooth"
+        });
+      }
+    });
+  });
+
+  // Update active dot based on scroll position
+  window.addEventListener("scroll", () => {
+    let current = "";
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+      if (scrollY >= sectionTop - sectionHeight / 2) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    dots.forEach(dot => {
+      dot.classList.remove("active");
+      if (dot.getAttribute("href") === "#" + current) {
+        dot.classList.add("active");
+      }
+    });
+  });
+
 </script>

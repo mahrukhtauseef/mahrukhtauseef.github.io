@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reflections | Mahrukh Tauseef </title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <header class="header">
+  <div class="header-top">
+
+    <div class="header-left">
+      <div class="name-badge">
+        <img src="assets/img/MainPhoto.png" alt="Mahrukh Tauseef" class="badge-photo" />
+        <h1 class="name">Mahrukh Tauseef</h1>
+      </div> 
+      <div class="qualities-line">
+      <span class="typing"></span>
+      </div>
+    </div>
+
+    <div class="header-right-icons">
+      <a href="mailto:tauseefmahrukh@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/mahrukh-tauseef/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/mahrukhtauseef" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://scholar.google.com/citations?user=T_CnHToAAAAJ&hl=en&oi=ao" target="_blank" aria-label="Google Scholar"><i class="fa-brands fa-google-scholar"></i></a>
+    </div>
+     <nav class="main-nav">
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="research.html" class="nav-link">Research</a></li>
+      <li><a href="projects.html" class="nav-link">Projects</a></li>
+      <li><a href="resume.html" class="nav-link">Resume</a></li>
+      <li><a href="reflections.html" class="nav-link">Reflections</a></li>
+      <li><a href="photography.html" class="nav-link">Photography</a></li>
+    </ul>
+  </nav>
+  </div>
+ 
+</header>
+
+  <main>
+    <div class="blog-container">
+      <aside class="toc">
+        <h3>What I have learned from...</h3>
+        <ul>
+          <li><a href="#entry1">A day at Google, NYC</a></li>
+          <li><a href="#entry2">Slam Poetry</a></li>
+          <li><a href="#entry3">Electronics Bootcamp</a></li>
+          <li><a href="#entry4">Jugaad Innovation</a></li>
+          <li><a href="#entry5">Fixing Bikes</a></li>
+        </ul>
+      </aside>
+
+      <section class="blog-content">
+        <article class="blog-entry" id="entry1">
+          <div class="entry-header">
+            <div class="entry-meta">May 9th, 2025 | A day at Google, NYC</div>
+          </div>
+          <div class="entry-image">
+              <img src="assets/img/Google_2.jpg" alt="Google NYC"/>
+            </div>
+          <div class="entry-body">
+            <div class="entry-text">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam...</p>
+            </div>
+          </div>
+        </article>
+      </section>
+    </div>
+  </main>
+
+   <footer class="footer">
+    <p>&copy; 2025 Mahrukh Tauseef. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
+  <script>
+  const links = document.querySelectorAll('.nav-link');
+  const currentPage = window.location.pathname.split('/').pop();
+
+  links.forEach(link => {
+    if (link.getAttribute('href') === currentPage) {
+      link.classList.add('active');
+    }
+  });
+</script>
