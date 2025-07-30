@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Resume | Mahrukh Tauseef</title>
+  <title>About | Mahrukh Tauseef</title>
   <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
 </head>
-<body>
-  <header class="header">
+<body class="about-page">
+   <header class="header">
   <div class="header-top">
 
     <div class="header-left">
@@ -16,6 +17,9 @@
         <img src="assets/img/MainPhoto.png" alt="Mahrukh Tauseef" class="badge-photo" />
         <h1 class="name">Mahrukh Tauseef</h1>
       </div> 
+      <div class="qualities-line">
+      <span class="typing"></span>
+      </div>
     </div>
 
     <div class="header-right-icons">
@@ -24,22 +28,48 @@
       <a href="https://github.com/mahrukhtauseef" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
       <a href="https://scholar.google.com/citations?user=T_CnHToAAAAJ&hl=en&oi=ao" target="_blank" aria-label="Google Scholar"><i class="fa-brands fa-google-scholar"></i></a>
     </div>
-  </div>
-  <nav class="main-nav">
+     <nav class="main-nav">
     <ul class="nav-links">
       <li><a href="index.html" class="nav-link">Home</a></li>
       <li><a href="about.html" class="nav-link">About</a></li>
       <li><a href="research.html" class="nav-link">Research</a></li>
       <li><a href="projects.html" class="nav-link">Projects</a></li>
       <li><a href="resume.html" class="nav-link">Resume</a></li>
-      <li><a href="blog.html" class="nav-link">Blog</a></li>
+      <li><a href="reflections.html" class="nav-link">Reflections</a></li>
       <li><a href="photography.html" class="nav-link">Photography</a></li>
     </ul>
   </nav>
+  </div>
+ 
 </header>
-   <footer class="footer">
-    <p>&copy; 2025 Mahrukh Tauseef. All rights reserved.</p>
-  </footer>
+
+  <main>
+    <!-- HTML: About section inspired by Nicolas Jullien -->
+<section class="about-simple">
+  <div class="about-container">
+    <img src="assets/img/Intro.jpg" alt="Mahrukh Tauseef" class="about-photo" />
+    <p class="about-text">
+    Hi, I’m Mahrukh. I come from a teeny tiny town in Pakistan called Toba Tek Singh. I hated growing up in Toba. I was convinced it was putting me at a disadvantage given the limited opportunities. But in hindsight, Toba played a huge role in molding me. It taught me to make more with less and to thrive in scarcity.
+
+I was always fond of school and did considerably well. At 14, I realized I had outgrown the education system in Toba and convinced my parents to send me to a boarding school — a bold and uncommon step for girls in my town. It felt like I gave away my childhood in pursuit of purpose. Since then, I’ve lived in Abu Dhabi, New York, and now Nashville — chasing that purpose.
+<br>
+   
+Each city shaped me. Abu Dhabi challenged my beliefs. I studied alongside people from over 80 countries, engaging in eye-opening discussions. I take a lot of pride in the kindness and openness this experience instilled in me.
+
+Next, I lived in New York for a year and found my forever home. This is where I embraced my true self — quirky, bold, vibrant. Its energy resonated deeply and made me want to build something bigger than myself.
+
+My Ph.D. brought me to Nashville, where I’ve been living for four years. Nashville grounded me. Through my Ph.D., I got to try a hundred different things and found what I really want to do.
+    
+<br>
+I’m a technologist, a builder, and a believer in meaningful design. My passion lies in Human-Computer Interaction. I want to design tools that help people — tools that make a difference, even in small ways. I don’t attach myself to specific platforms or technologies; I know I can learn whatever the problem demands.
+
+My dream job is simple: to wake up every day and solve real-world problems — both the shark bites and the mosquito bites — always led by the question: who does this help?
+    </p>
+  </div>
+</section>
+    
+  
+</main>
 </body>
 </html>
 
@@ -52,4 +82,47 @@
       link.classList.add('active');
     }
   });
+
+  const sections = document.querySelectorAll("main section");
+  const dots = document.querySelectorAll(".dot");
+
+  // Position dots dynamically based on number of sections
+  dots.forEach((dot, i) => {
+    dot.parentElement.style.top = `${(i / (dots.length - 1)) * 100}%`;
+
+    // Scroll into view on click (instead of default jump)
+    dot.addEventListener("click", function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute("href").substring(1);
+      const targetSection = document.getElementById(targetId);
+      if (targetSection) {
+        const offsetTop = targetSection.offsetTop;
+        const headerOffset = 80; // Adjust to match your header height
+        window.scrollTo({
+          top: offsetTop - headerOffset,
+          behavior: "smooth"
+        });
+      }
+    });
+  });
+
+  // Update active dot based on scroll position
+  window.addEventListener("scroll", () => {
+    let current = "";
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+      if (scrollY >= sectionTop - sectionHeight / 2) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    dots.forEach(dot => {
+      dot.classList.remove("active");
+      if (dot.getAttribute("href") === "#" + current) {
+        dot.classList.add("active");
+      }
+    });
+  });
+
 </script>
