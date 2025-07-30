@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Photography | Mahrukh Tauseef</title>
+  <title>Resume | Mahrukh Tauseef</title>
   <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
-   <header class="header">
+  <header class="header">
   <div class="header-top">
 
     <div class="header-left">
@@ -17,9 +16,6 @@
         <img src="assets/img/MainPhoto.png" alt="Mahrukh Tauseef" class="badge-photo" />
         <h1 class="name">Mahrukh Tauseef</h1>
       </div> 
-      <div class="qualities-line">
-      <span class="typing"></span>
-      </div>
     </div>
 
     <div class="header-right-icons">
@@ -28,90 +24,21 @@
       <a href="https://github.com/mahrukhtauseef" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
       <a href="https://scholar.google.com/citations?user=T_CnHToAAAAJ&hl=en&oi=ao" target="_blank" aria-label="Google Scholar"><i class="fa-brands fa-google-scholar"></i></a>
     </div>
-     <nav class="main-nav">
+  </div>
+  <nav class="main-nav">
     <ul class="nav-links">
       <li><a href="index.html" class="nav-link">Home</a></li>
       <li><a href="about.html" class="nav-link">About</a></li>
       <li><a href="research.html" class="nav-link">Research</a></li>
       <li><a href="projects.html" class="nav-link">Projects</a></li>
       <li><a href="resume.html" class="nav-link">Resume</a></li>
-      <li><a href="reflections.html" class="nav-link">Reflections</a></li>
+      <li><a href="blog.html" class="nav-link">Blog</a></li>
       <li><a href="photography.html" class="nav-link">Photography</a></li>
     </ul>
   </nav>
-  </div>
- 
 </header>
 
-  <main>
-    <div class="gallery-grid">
-      <div class="gallery-item">
-        <img src="assets/img/Photography/Beetle_Artwork_Small.jpg"; alt="Photo 1" class="gallery-img">
-        <div class="caption">A beetle's artwork</div>
-      </div>
-      <div class="gallery-item">
-        <img src="assets/img/Photography/Birdie.jpg" alt="Photo 3" class="gallery-img">
-        <div class="caption">Suspicious robin</div>
-      </div>
-      <div class="gallery-item">
-        <img src="assets/img/Photography/Blur_Deer.jpg" alt="Photo 4" class="gallery-img">
-        <div class="caption">In a blur</div>
-      </div>
-      <div class="gallery-item">
-        <img src="assets/img/Photography/Chasing_Vultures.jpg" alt="Photo 5" class="gallery-img">
-        <div class="caption">Chasing vultures</div>
-      </div>
-         <div class="gallery-item">
-        <img src="assets/img/Photography/Nashville_Downtown_2.jpg" alt="Photo 10" class="gallery-img">
-        <div class="caption">Downtown Nashville</div>
-      </div>
-      <div class="gallery-item">
-        <img src="assets/img/Photography/Duck_Couple_Brighter.jpg" alt="Photo 7" class="gallery-img">
-        <div class="caption">The waltzing mallards</div>
-      </div>
-      <div class="gallery-item">
-        <img src="assets/img/Photography/CircleofLife-4.jpg" alt="Photo 6" class="gallery-img">
-        <div class="caption">Circle of life</div>
-      </div>
-      <div class="gallery-item">
-       <img src="assets/img/Photography/Duck.jpg" alt="Photo 8" class="gallery-img">
-        <div class="caption">I'm just a goose</div>
-      </div>
-      <div class="gallery-item">
-        <img src="assets/img/Photography/Ice.jpg" alt="Photo 9" class="gallery-img">
-        <div class="caption">What winter left behind</div>
-      </div>
-      <div class="gallery-item">
-        <img src="assets/img/Photography/Shelby_Bench.jpg" alt="Photo 13" class="gallery-img">
-        <div class="caption">Invitation to sit</div>
-      </div>
-      <div class="gallery-item">
-        <img src="assets/img/Photography/SkyTree.jpg" alt="Photo 14" class="gallery-img">
-        <div class="caption">Barren tree bore fruit</div>
-      </div>
-      <div class="gallery-item">
-        <img src="assets/img/Photography/Vandy_Dorm.jpg" alt="Photo 15" class="gallery-img">
-        <div class="caption">Vandy dorm</div>
-      </div>
-      <div class="gallery-item">
-        <img src="assets/img/Photography/Radnor_deer.jpg" alt="Photo 15" class="gallery-img">
-        <div class="caption">A staring contest</div>
-      </div>
-      <div class="gallery-item">
-        <img src="assets/img/Photography/Radnor_Tree.jpg" alt="Photo 15" class="gallery-img">
-        <div class="caption">Reflections</div>
-      </div>
-    
-      <!-- Add more images as needed -->
-    </div>
-
-      <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-    <img id="lightbox-img" src="" alt="">
-  </div>
-
-  </main>
-
-  <footer class="footer">
+   <footer class="footer">
     <p>&copy; 2025 Mahrukh Tauseef. All rights reserved.</p>
   </footer>
 </body>
@@ -126,16 +53,4 @@
       link.classList.add('active');
     }
   });
-
-  document.querySelectorAll('.gallery-item img').forEach(img => {
-  img.addEventListener('click', function(e) {
-    e.stopPropagation();
-    document.getElementById('lightbox-img').src = this.src;
-    document.getElementById('lightbox').style.display = 'flex';
-  });
-});
-
-function closeLightbox() {
-  document.getElementById('lightbox').style.display = 'none';
-}
 </script>
