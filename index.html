@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" class="home-page">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mahrukh Tauseef</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <!-- Swiper CSS -->
@@ -13,7 +12,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<body class="home-page">
+<body>
  <header class="header">
   <div class="header-top">
 
@@ -33,64 +32,31 @@
       <a href="https://github.com/mahrukhtauseef" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
       <a href="https://scholar.google.com/citations?user=T_CnHToAAAAJ&hl=en&oi=ao" target="_blank" aria-label="Google Scholar"><i class="fa-brands fa-google-scholar"></i></a>
     </div>
-     <nav class="main-nav">
+  </div>
+  <nav class="main-nav">
     <ul class="nav-links">
       <li><a href="index.html" class="nav-link">Home</a></li>
-
-      <li><a href="about.html" class="nav-link">About</a></li>
-      <li><a href="research.html" class="nav-link">Research</a></li>
-      <li><a href="projects.html" class="nav-link">Projects</a></li>
-      <li><a href="resume.html" class="nav-link">Resume</a></li>
-      <li><a href="reflections.html" class="nav-link">Reflections</a></li>
-      <li><a href="photography.html" class="nav-link">Photography</a></li>
+      <li><a href="index.html" class="nav-link">About</a></li>
+      <li><a href="index.html" class="nav-link">Research</a></li>
+      <li><a href="index.html" class="nav-link">Projects</a></li>
+      <li><a href="index.html" class="nav-link">Resume</a></li>
+      <li><a href="index.html" class="nav-link">Blog</a></li>
+      <li><a href="index.html" class="nav-link">Photography</a></li>
     </ul>
   </nav>
-  </div>
- 
 </header>
 
-<main>  
-  <div class="scroll-container">
-  <section class="full-screen-section">
-    <div class ="intro-content">
-  <p class="tagline">
-    Hi! I am <span style="color:#f76c5e; font-weight: 570;">Mahrukh</span>. I love creating value through <strong><span style="color:#f76c5e; font-weight: 570;">human-centered design</span></strong>. 
-  </p>
-  <div class="focus">
-  <hr class="tagline-divider" />
-  <p class="focus-areas">
-  Human-Computer Interaction&nbsp;&nbsp;·&nbsp;&nbsp;Augmented Reality&nbsp;&nbsp;·&nbsp;&nbsp;Artificial Intelligence&nbsp;&nbsp;·&nbsp;&nbsp;Product Development ·&nbsp;&nbsp;Entrepreneurship
-</p>
-  </div>
-  </div>
-     <div class="scroll-down" onclick="scrollToNextSection()">
-    &#x25BC;
 
-   <h2 style="color: #2d2d2d;">What's new?</h2>
-     </div>
+
+<main>
+  <section class="section brewing">
+  <h2>Development in Progress</h2>
+  <div class="divider-accent"></div>
 </section>
- 
-  <section id="featured" class="full-screen-section">
-    <!-- Featured work or carousel will go here -->
-       <div class="carousel-wrapper">
-  <button class="carousel-btn left-btn">&#x25C0;</button>
-
-  <div id="card-carousel" class="card-carousel">
-  </div>
-
-  <button class="carousel-btn right-btn">&#x25B6;</button>
-</div>
-  <div class="carousel-dots" id="carousel-dots"></div>
-  </section>
-  </div>
-    <!-- <h2>What's new?</h2>
-     <div class="divider-accent"></div>
- -->
 </main>
-  <!-- <footer class="footer">
+  <footer class="footer">
     <p>&copy; 2025 Mahrukh Tauseef.</p>
-  </footer> -->
-
+  </footer>
 </body>
 </html>
 <script>
@@ -101,110 +67,70 @@
     backDelay: 1000,
     loop: true
   });
-    function scrollToNextSection() {
-    const nextSection = document.getElementById("featured");
-    if (nextSection) {
-      nextSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
 
   const updates = [
     {
-      image: "assets/img/Updates/ARIA.jpg",
+      image: "assets/img/placeholder.png",
       description: "Building with Meta's ARIA glasses.",
-      summary: "I am using ARIA glasses to build algorithms to predict a user's trajectory ahead of time.",
       date: "2025-01-31",
-      category: "Research",
-      link: "research.html#ARLoco",
-      tag1: "AR",
-      tag2: "AI",
-      tag3: "Research"
+      link: "https://chi2025.org/paper/myresearch"
     },
     {
-      image: "assets/img/Updates/ISMARPresentation2024.jpg",
+      image: "assets/img/ISMARPresentation2024.jpg",
       description: "Poster presentation at ISMAR 2024.",
       date: "2024-10-24",
-      link: "research.html#AROlder",
-      tag1: "AR",
-      tag2: "HCI",
-      tag3: "Research"
+      link: "https://ieeexplore.ieee.org/abstract/document/10765303?casa_token=zN6CMgYLq1UAAAAA:gZWg2QN0dJ6l9jr2W-8UBOMSDFgucPLlRhWxF4c6yLu6Hp3x8sOaURTl_R4crvF3Os1JnhHxNw"
+
     },
     {
-      image: "assets/img/Updates/Spellingo.png",
+      image: "assets/img/Spellingo.png",
       description: "A spelling app from scratch in 8 hours?",
       date: "2025-06-10",
-      link: "projects.html#spellingo",
-      tag1: "Project",
-      tag2: "Rapid Prototyping"
-    
+      link: ""
     },
     {
-      image: "assets/img/Updates/Google.jpg",
+      image: "assets/img/Google.jpg",
       description: "Le Tour de Google",
       date: "2025-05-9",
-      link: "reflections.html#entry1",
-      tag1:"Reflection"
-    },
-
-    {
-      image: "assets/img/Updates/Mindy.png",
-      description: "Mindy- A Dementia Aware AI Agent",
-      date: "2024-01-01",
-      link: "projects.html#mindy",
-      tag1: "Project",
-      tag2:"AI",
-      tag3: "HCI"
+      link: ""
     }
-    ,
-    {
-      image: "assets/img/Updates/Bootcamp.png",
-      description: "Electronics Bootcamp",
-      date: "2025-06-23",
-      tag1: "Reflection",
-      link: "reflections.html#entry3"
-    }
+    // Add more entries here...
   ];
 
   // Sort chronologically (newest first)
   updates.sort((a, b) => new Date(b.date) - new Date(a.date));
 
   let loadedCount = 0;
-  const loadSize = 6;
-  const container = document.getElementById("card-carousel");
+  const loadSize = 5;
+  const container = document.getElementById("card-container");
+  const loadMoreBtn = document.getElementById("load-more");
 
-  let currentFilter = "All";
-
-  function filterAndRenderCards() {
-    container.innerHTML = '';
-    loadedCount = 0;
-    const filteredUpdates = currentFilter === "All"
-      ? updates
-      : updates.filter(update => update.category === currentFilter);
-    filteredUpdates.slice(0, loadSize).forEach(update => {
+  function loadCards() {
+    const nextBatch = updates.slice(loadedCount, loadedCount + loadSize);
+    nextBatch.forEach(update => {
       const card = document.createElement("div");
-      const formattedDate = (() => {
-        const [year, month, day] = update.date.split('-').map(Number);
-        const localDate = new Date(year, month - 1, day);
-        return localDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
-      })();
-      const tags = [update.tag1, update.tag2, update.tag3].filter(Boolean).map(tag => `<span class="tag">${tag}</span>`).join('');
+      card.className = "update-card";
       card.innerHTML = `
-        <a href="${update.link || '#'}" class="card-link">
-          <img src="${update.image}" alt="Update image" class="update-image" />
-          <div class="date">${formattedDate}</div>
-          <div class="description">${update.description}</div>
-          <div class="card-tags">
-            ${tags}
-          </div>
-        </a>
+        <img src="${update.image}" alt="Update image" class="update-image" />
+        <div class="date">${(() => {
+  const [year, month, day] = update.date.split('-').map(Number);
+  const localDate = new Date(year, month - 1, day); // JS months are 0-indexed
+  return localDate.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+})()}</div>
+        <div class="description">${update.description}</div>
       `;
-      card.classList.add("update-card");
       container.appendChild(card);
     });
-    createCarouselDots();
-    updateArrowVisibility();
+    loadedCount += loadSize;
+    if (loadedCount >= updates.length) {
+      loadMoreBtn.style.display = "none";
+    }
   }
 
+  loadMoreBtn.addEventListener("click", loadCards);
+
+  // Load first batch on page load
+  window.addEventListener("DOMContentLoaded", loadCards);
   const links = document.querySelectorAll('.nav-link');
   const currentPage = window.location.pathname.split('/').pop();
 
@@ -213,77 +139,4 @@
       link.classList.add('active');
     }
   });
-
-
-  document.querySelector('.left-btn').addEventListener('click', () => {
-    container.scrollBy({
-      left: -container.offsetWidth,
-      behavior: 'smooth'
-    });
-  });
-
-  document.querySelector('.right-btn').addEventListener('click', () => {
-    container.scrollBy({
-      left: container.offsetWidth,
-      behavior: 'smooth'
-    });
-  });
-
-  function updateArrowVisibility() {
-    const leftBtn = document.querySelector('.left-btn');
-    const rightBtn = document.querySelector('.right-btn');
-    const maxScrollLeft = container.scrollWidth - container.clientWidth;
-    const scrollLeft = container.scrollLeft;
-
-    // Use a small threshold to account for float rounding issues
-    const threshold = 5;
-
-    leftBtn.style.display = scrollLeft > threshold ? 'block' : 'none';
-    rightBtn.style.display = (maxScrollLeft - scrollLeft) > threshold ? 'block' : 'none';
-  }
-
-  container.addEventListener('scroll', () => {
-    updateArrowVisibility();
-    updateActiveDot();
-  });
-
-  window.addEventListener('resize', updateArrowVisibility);
-
-  function createCarouselDots() {
-    const dotsContainer = document.querySelector('.carousel-dots');
-    dotsContainer.innerHTML = ''; // Clear existing
-
-    const updateCards = document.querySelectorAll('.update-card');
-    const cardsPerView = 4;
-    const totalDots = Math.ceil(updateCards.length / cardsPerView);
-
-    for (let i = 0; i < totalDots; i++) {
-      const dot = document.createElement('span');
-      dot.classList.add('dot');
-      if (i === 0) dot.classList.add('active');
-      dotsContainer.appendChild(dot);
-    }
-  }
-
-  function updateActiveDot() {
-    const carouselWrapper = document.getElementById('card-carousel');
-    const updateCards = document.querySelectorAll('.update-card');
-    const dots = document.querySelectorAll('.carousel-dots .dot');
-
-    const scrollLeft = carouselWrapper.scrollLeft;
-    const cardWidth = updateCards[0]?.offsetWidth + 16 || 1; // avoid NaN
-    const cardsPerView = 4;
-    const currentIndex = Math.round(scrollLeft / (cardWidth * cardsPerView));
-
-    dots.forEach(dot => dot.classList.remove('active'));
-    if (dots[currentIndex]) {
-      dots[currentIndex].classList.add('active');
-    }
-  }
-
-  document.getElementById('card-carousel').addEventListener('scroll', updateActiveDot);
-
-  window.addEventListener("DOMContentLoaded", () => {
-  filterAndRenderCards();
-});
 </script>
